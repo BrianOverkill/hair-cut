@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarBarMan</title>
+    <!-- Style -->
+    <style>
+        /* Home page styles */
+        .home-page {
+            background: linear-gradient(
+                rgba(0, 0, 0, 0.5),  /* Gradient overlay */
+                rgba(0, 0, 0, 0.5)   /* Gradient overlay */
+            ), url('/images/background.jpg');  /* Ensure the path to the image is correct */
+            background-size: cover;  /* Full screen background */
+            background-position: center;  /* Centers the background image */
+            background-attachment: fixed;  /* Fixes the background during scrolling */
+            height: 100vh;  /* Full viewport height */
+            display: flex;  /* Flexbox for centering content */
+            justify-content: center;  /* Centers content horizontally */
+            align-items: center;  /* Centers content vertically */
+            text-align: center;  /* Centers the text */
+            color: white; /* Adjusted text color */
+        }
+
+        /* Adjusting colors for various sections */
+        .navbar {
+            background-color: #007BFF; /* Blue navbar */
+        }
+        
+        .navbar a {
+            color: white; /* Navbar text color */
+        }
+
+        .navbar a:hover {
+            color: #FFD700; /* Yellow color on hover */
+        }
+
+        .hero h1 {
+            color: #FFD700; /* Yellow for header text */
+        }
+
+        .hero p {
+            color: #f1f1f1; /* Light color for paragraph text */
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #1d1d1d; /* Dark background for about section */
+            color: white; /* White text for contrast */
+            padding: 50px 0;
+        }
+
+        .about img {
+            border-radius: 8px; /* Rounded corners for image */
+        }
+
+        /* Services Section */
+        .services {
+            background-color: #0e0e0e;  /* Light background for services */
+            color: #333; /* Dark text for readability */
+            padding: 50px 0;
+        }
+
+        .service-item h3 {
+            color: #007BFF; /* Blue color for service titles */
+        }
+        .services p{
+            color: white;
+            
+        }
+        /* Stats Section */
+        .scronder {
+            background-color: #222; /* Dark background for stats section */
+            color: white;
+            padding: 50px 0;
+        }
+
+        .scronder h1 {
+            color: #FFD700; /* Gold color for numbers */
+        }
+
+        .scronder .item p {
+            color: #f1f1f1; /* Light color for text */
+        }
+
+        /* Booking Section */
+        .booking {
+            background-color: #0e0e0e;  /* Blue background for booking */
+            color: white;
+            padding: 50px 0;
+        }
+
+        .form-control {
+            border-radius: 5px; /* Rounded corners for input fields */
+        }
+
+        .btn-primary {
+            background-color: #FFD700; /* Gold button color */
+            border-color: #FFD700;
+        }
+
+        .btn-primary:hover {
+            background-color: #FFB800; /* Darker gold on hover */
+            border-color: #FFB800;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #0e0e0e; /* Dark background for contact */
+            color: white;
+            padding: 50px 0;
+        }
+
+        .form-control {
+            background-color: #555; /* Darker input fields for contact */
+            color: white;
+        }
+
+        /* Review Section */
+        .reviews-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+
+        .card-title {
+            color: #FFD700; /* Yellow for review titles */
+        }
+
+        .card-body {
+            background-color: #f1f1f1;
+            border-radius: 8px;
+        }
+
+        /* Submit Review Section */
+        .submit-review {
+            background-color: #007BFF; /* Blue background for submit review */
+            color: white;
+            padding: 50px 0;
+        }
+
+        .submit-review .form-control {
+            background-color: #555; /* Dark input fields */
+            color: white;
+        }
+        
+        .submit-review button {
+            background-color: #FFD700; /* Gold for submit button */
+            border-color: #FFD700;
+        }
+
+        .submit-review button:hover {
+            background-color: #FFB800;
+            border-color: #FFB800;
+        }
+    </style>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">BarBarMan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#booking">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="home-page">
+        <div class="hero">
+            <h1 style="color: white;">Welcome to BarBarMan</h1>
+            <p>
+                We offer expert web development and design services to help businesses build a strong online presence. From custom websites to responsive designs, we create user-friendly platforms that engage visitors and deliver results. Whether launching a new site or improving an existing one, we provide tailored solutions to meet your needs.
+            </p>   
+        </div>
+    </section>  
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h1 style="text-align: center;">About Us</h1>
+        <div class="about-content">
+            <img src="/images/about.jpg" width="440px" height="640px" alt="Barbershop">
+            <p style="font-size: 30px;">
+                Welcome to BarBarMan, where tradition meets 
+                modern style. We offer expert haircuts, shaves, and grooming 
+                services for men of all ages in a relaxed, welcoming atmosphere. 
+                Our skilled barbers focus on quality and attention to detail, 
+                ensuring you leave looking and feeling
+                 your best. At BarBarMan,
+                  we use top-quality products and
+                   techniques to deliver a grooming 
+                   experience that boosts your confidence.
+                    We look forward to welcoming you and helping
+                     you achieve your perfect style!
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="pag-services" style="text-align: center;">
+            <h1 style="color: white;">Our Services</h1>
+            <p>
+                At BarBarMan, we provide expert grooming and personalized attention to help you look and feel your best. Our talented barbers offer a wide range of services, from classic cuts to modern styles, all tailored to your unique preferences. Discover our full range of services below:
+            </p>
+        </div>
+        <div class="p-services">
+            <div class="service-item">
+                <img src="/images/S1.jpg" alt="Classic Haircut" width="370px">
+                <div class="service-text">
+                    <h3>Classic Haircut</h3>
+                    <p>A timeless, clean haircut that suits your style.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <img src="/images/S2.jpg" alt="Hot Towel Shave" width="370px">
+                <div class="service-text">
+                    <h3>Hot Towel Shave</h3>
+                    <p>Relax and enjoy a traditional hot towel shave with a straight razor.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <img src="/images/S3.jpg" alt="Beard Trim" width="370px">
+                <div class="service-text">
+                    <h3>Beard Trim</h3>
+                    <p>Perfectly shaped beard to enhance your facial features.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <h2 class="text-center my-4" style="color: white;">Book Your Appointment</h2>
+            <form class="booking-form">
+                <!-- Service Selection -->
+                <div class="mb-3">
+                    <label for="service" class="form-label">Choose Service</label>
+                    <select id="service" name="service" class="form-select" required>
+                        <option value="" disabled selected>Select a Service</option>
+                        <option value="haircut">Haircut</option>
+                        <option value="beard-trim">Beard Trim</option>
+                        <option value="shave">Shave</option>
+                        <option value="full-package">Full Package</option>
+                    </select>
+                </div>
+                <!-- Date Picker -->
+                <div class="mb-3">
+                    <label for="date" class="form-label">Select Date</label>
+                    <input type="date" id="date" name="date" class="form-control" required>
+                </div>
+                <!-- Time Picker -->
+                <div class="mb-3">
+                    <label for="time" class="form-label">Select Time</label>
+                    <input type="time" id="time" name="time" class="form-control" required>
+                </div>
+                <!-- Name -->
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <!-- Phone Number -->
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Your Phone</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone" required>
+                </div>
+                <!-- Submit -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Book Appointment</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Your message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Reviews Section -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <h2 class="text-center">What Our Clients Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/images/c1.jpg" alt="Client Review 1" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">John Doe</h5>
+                            <p class="card-text">"Fantastic service! The barbers here are extremely talented and really listen to your needs. Highly recommend."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/images/c2.jpg" alt="Client Review 2" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Alex Smith</h5>
+                            <p class="card-text">"Great experience! The staff were friendly and the haircut was exactly what I asked for. I’ll be back for sure!"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/images/c3.jpg" alt="Client Review 3" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Mark Johnson</h5>
+                            <p class="card-text">"One of the best grooming experiences I've had. Excellent attention to detail and professional service."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h2>Promotions & Specials</h2>
+                </div>
+        
+                <!-- Seasonal Discounts Section -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title text-success">🎉 Seasonal Discounts!</h3>
+                            <p class="card-text">Check out our exclusive seasonal offers:</p>
+                            <ul class="list-unstyled">
+                                <li><strong>Back to School Haircuts:</strong> 20% off all haircuts for students. Just bring your student ID!</li>
+                                <li><strong>Holiday Grooming Packages:</strong> Pamper yourself or a loved one with our special holiday package. Includes a haircut and beard trim for just $40!</li>
+                            </ul>
+                            <p class="text-muted">Limited-time offer. Valid until the end of the season!</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Loyalty Program Section -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title text-primary">🌟 Join Our Loyalty Program!</h3>
+                            <p class="card-text">Become a member and enjoy exclusive rewards for being a loyal customer:</p>
+                            <ul class="list-unstyled">
+                                <li>Earn a stamp with every visit.</li>
+                                <li>Get a free haircut after your 10th visit!</li>
+                                <li>Receive special discounts for birthdays, anniversaries, and more!</li>
+                            </ul>
+                            <p class="text-muted">Sign up at the front desk today and start earning rewards immediately!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

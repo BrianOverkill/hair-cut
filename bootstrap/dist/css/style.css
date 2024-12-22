@@ -1,0 +1,117 @@
+@import url(../css/clash-display.css);
+
+:root {
+    --c-dark: #212529;
+    --c-brand: #4e57d4;
+    --c-brand-light: #6970dd;
+    --c-light: #f8f9fa;
+    --c-accent: #ff7043;
+    --font-primary: 'Arial', sans-serif;
+    --font-secondary: 'Verdana', sans-serif;
+    --box-shadow: rgba(0, 0, 0, 0.08) 0px 15px 25px;
+    
+    /* Global transition properties */
+    --transition-duration: 0.3s; /* Duration for transitions */
+    --transition-timing: ease;   /* Timing function */
+    --transition-property: all;  /* What properties to transition */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--c-light);
+    color: var(--c-dark);
+}
+
+/* Example for applying global transition */
+button, a, .navbar a, img {
+    transition: var(--transition-property) var(--transition-duration) var(--transition-timing);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--c-brand);
+    transition: var(--transition-property) var(--transition-duration) var(--transition-timing);
+}
+
+button {
+    background-color: var(--c-brand);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color var(--transition-duration) var(--transition-timing);
+}
+
+button:hover {
+    background-color: var(--c-brand-light); /* Smooth background-color change on hover */
+}
+
+a {
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: color var(--transition-duration) var(--transition-timing);
+}
+
+a:hover {
+    color: var(--c-accent); /* Change link color on hover smoothly */
+}
+
+.navbar {
+    background-color: var(--c-dark);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color var(--transition-duration) var(--transition-timing);
+}
+
+.navbar a {
+    color: var(--c-accent);
+    margin: 0 1rem;
+    transition: color var(--transition-duration) var(--transition-timing);
+}
+
+.navbar a:hover {
+    color: var(--c-brand-light);
+}
+
+/* Transition for Images */
+img {
+    transition: transform var(--transition-duration) var(--transition-timing), opacity var(--transition-duration) var(--transition-timing);
+}
+
+img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    opacity: 0.8; /* Slight fade effect */
+}
+
+
+/* NAVBAR */
+        /* Custom Styling for Navbar */
+        .navbar-brand img {
+            width: 150px; /* Adjust size of the logo */
+            height: auto;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1.1rem;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ff7043 !important; /* Accent color for hover effect */
+        }
+
+        .navbar {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-toggler-icon {
+            background-color: #212529; /* Dark toggler icon */
+        }
