@@ -40,3 +40,5 @@
 | - Contact Info, Social Links               |
 | - Quick Links (Privacy, Terms, etc.)       |
 +--------------------------------------------+
+
+    

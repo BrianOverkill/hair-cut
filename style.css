@@ -1,12 +1,12 @@
 /* Root Variables */
 :root {
-    --primary-color: #FF5733; /* New primary color */
+    --primary-color: #1934cc; /* New primary color */
     --secondary-color: #2E8B57; /* New secondary color */
     --background-color: #000000; /* Dark background */
     --text-color: #141414; /* Light gray text */
     --heading-font: 'Arial', sans-serif;
     --body-font: 'Roboto', sans-serif;
-    --link-color: #FF5733; /* Link color matches the primary */
+    --link-color: #1934cc; /* Link color matches the primary */
     --link-hover-color: #C0392B; /* Darker red for link hover */
     --border-radius: 0.25rem;
     --box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);

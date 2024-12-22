@@ -48,7 +48,7 @@
 
         /* About Section */
         .about {
-            background-color: #1d1d1d; /* Dark background for about section */
+            background-color: #333; /* Dark background for about section */
             color: white; /* White text for contrast */
             padding: 50px 0;
         }
@@ -59,7 +59,7 @@
 
         /* Services Section */
         .services {
-            background-color: #0e0e0e;  /* Light background for services */
+            background-color: #f8f9fa; /* Light background for services */
             color: #333; /* Dark text for readability */
             padding: 50px 0;
         }
@@ -67,10 +67,7 @@
         .service-item h3 {
             color: #007BFF; /* Blue color for service titles */
         }
-        .services p{
-            color: white;
-            
-        }
+
         /* Stats Section */
         .scronder {
             background-color: #222; /* Dark background for stats section */
@@ -88,7 +85,7 @@
 
         /* Booking Section */
         .booking {
-            background-color: #0e0e0e;  /* Blue background for booking */
+            background-color: #007BFF; /* Blue background for booking */
             color: white;
             padding: 50px 0;
         }
@@ -109,7 +106,7 @@
 
         /* Contact Section */
         .contact {
-            background-color: #0e0e0e; /* Dark background for contact */
+            background-color: #333; /* Dark background for contact */
             color: white;
             padding: 50px 0;
         }
@@ -171,7 +168,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto"> <!-- Add 'ms-auto' to align navbar items to the right -->
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
@@ -200,11 +197,12 @@
             </div>
         </div>
     </nav>
+    
 
     <!-- Home Section -->
     <section class="home-page">
         <div class="hero">
-            <h1 style="color: white;">Welcome to BarBarMan</h1>
+            <h1 style="color: #fff;">Welcome to BarBarMan</h1>
             <p>
                 We offer expert web development and design services to help businesses build a strong online presence. From custom websites to responsive designs, we create user-friendly platforms that engage visitors and deliver results. Whether launching a new site or improving an existing one, we provide tailored solutions to meet your needs.
             </p>   
@@ -216,18 +214,8 @@
         <h1 style="text-align: center;">About Us</h1>
         <div class="about-content">
             <img src="/images/about.jpg" width="440px" height="640px" alt="Barbershop">
-            <p style="font-size: 30px;">
-                Welcome to BarBarMan, where tradition meets 
-                modern style. We offer expert haircuts, shaves, and grooming 
-                services for men of all ages in a relaxed, welcoming atmosphere. 
-                Our skilled barbers focus on quality and attention to detail, 
-                ensuring you leave looking and feeling
-                 your best. At BarBarMan,
-                  we use top-quality products and
-                   techniques to deliver a grooming 
-                   experience that boosts your confidence.
-                    We look forward to welcoming you and helping
-                     you achieve your perfect style!
+            <p>
+                Welcome to BarBarMan, where tradition meets modern style. We offer expert haircuts, shaves, and grooming services for men of all ages in a relaxed, welcoming atmosphere. Our skilled barbers focus on quality and attention to detail, ensuring you leave looking and feeling your best. At BarBarMan, we use top-quality products and techniques to deliver a grooming experience that boosts your confidence. We look forward to welcoming you and helping you achieve your perfect style!
             </p>
         </div>
     </section>
@@ -235,7 +223,7 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="pag-services" style="text-align: center;">
-            <h1 style="color: white;">Our Services</h1>
+            <h1>Our Services</h1>
             <p>
                 At BarBarMan, we provide expert grooming and personalized attention to help you look and feel your best. Our talented barbers offer a wide range of services, from classic cuts to modern styles, all tailored to your unique preferences. Discover our full range of services below:
             </p>
@@ -268,7 +256,7 @@
     <!-- Booking Section -->
     <section class="booking" id="booking">
         <div class="container">
-            <h2 class="text-center my-4" style="color: white;">Book Your Appointment</h2>
+            <h2 class="text-center my-4">Book Your Appointment</h2>
             <form class="booking-form">
                 <!-- Service Selection -->
                 <div class="mb-3">
