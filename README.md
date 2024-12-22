@@ -1,6 +1,3 @@
-Here is a README file for your project **BarberMan**:
-
-```markdown
 # BarberMan
 
 BarberMan is a modern, responsive web application designed for booking appointments with barbers. It features sections for **About**, **Services**, **Bookings**, and **Contact** to help users easily navigate and book their desired services.
