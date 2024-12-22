@@ -63,7 +63,3 @@ Thank you for checking out **BarberMan**! If you have any questions or suggestio
 
 ```
 
-### How to Customize:
-- **GitHub URL**: The URL to the GitHub repository (`https://github.com/BrianOverkill/hair-cut`) is already included.
-- **Tech Stack**: Customize the list if you're using other tools (e.g., JavaScript frameworks, additional libraries).
-- **Installation**: The steps are standard for a static site project, but you can adjust this if your project has different requirements.
